@@ -22,7 +22,7 @@ jobs:
       - name: Publish to Registry(pushed tag)
         env:
           ROUTR_VERSION: ${{ steps.get_version.outputs.ROUTR_VERSION }}
-        uses: elgohr/Publish-Docker-Github-Action@master
+        uses: elgohr/Publish-Docker-Github-Action@v5
         with:
           name: fonoster/routr
           username: ${{ secrets.DOCKER_HUB_USERNAME }}
@@ -33,7 +33,7 @@ jobs:
       - name: Publish to Registry(latest tag)
         env:
           ROUTR_VERSION: ${{ steps.get_version.outputs.ROUTR_VERSION }}
-        uses: elgohr/Publish-Docker-Github-Action@master
+        uses: elgohr/Publish-Docker-Github-Action@v5
         with:
           name: fonoster/routr
           username: ${{ secrets.DOCKER_HUB_USERNAME }}
